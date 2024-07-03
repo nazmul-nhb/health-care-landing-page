@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.font-inter{
+    font-family: "Inter", sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* styles for the header part */
+header.background {
+    background-image: url('/src/images/chess-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 56px 120px;
+}
+
+.nav-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(179.57deg, rgba(0, 193, 157, 0) -25.412%, rgba(2, 0, 67, 0.47) 107.111%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.navbar,
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+.navbar ul a {
+    text-decoration: none;
+    color: #514dba;
+}
+
+/* Hero Section */
+.hero {
+    margin: 40px auto;
+    border-radius: 48px;
+}
+
+.hero .banner {
+    width: 100%;
+    border-radius: 48px;
+}
