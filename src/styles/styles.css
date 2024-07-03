@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-.font-inter{
+.font-inter {
     font-family: "Inter", sans-serif;
 }
 
@@ -9,19 +9,23 @@
     --doc: #020043;
 }
 
-body{
+body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: var(--doc);
 }
 
+main {
+    background-color: #e9e9ee;
+}
+
 /* styles for the header part */
 header.background {
-    background-image: url('/src/images/chess-bg.svg');
+    /* background-image: url('/src/images/chess-bg.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     position: relative;
     padding: 56px 120px;
     letter-spacing: 1px;
@@ -33,7 +37,16 @@ header.background {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(179.57deg, rgba(0, 193, 157, 0) -25.412%, rgba(2, 0, 67, 0.47) 107.111%);
+background: linear-gradient(179.57deg,
+            rgba(0, 193, 157, 0) 15%,
+            /* Light color */
+            rgba(2, 0, 67, 0.47) 65%,
+            /* Darker color in the middle moved lower */
+            rgba(0, 193, 157, 0) 85%,
+            /* Light color again */
+            #e9e9ee 100%
+            /* Smooth transition to the next section's background color */
+        );
     z-index: 1;
     pointer-events: none;
 }
@@ -57,12 +70,12 @@ header.background {
     color: var(--doc);
 }
 
-.navbar ul a:hover{
+.navbar ul a:hover {
     color: #b26505;
     transition: color 0.7s ease-in-out;
 }
 
-button.appointment{
+button.appointment {
     padding: 14px 28px;
     cursor: pointer;
     background-color: transparent;
@@ -73,7 +86,7 @@ button.appointment{
     letter-spacing: 1px;
 }
 
-button.appointment:hover{
+button.appointment:hover {
     color: white;
     background-color: var(--doc);
     transition: all 0.5s ease-in-out;
@@ -90,3 +103,44 @@ button.appointment:hover{
     border-radius: 48px;
 }
 
+
+/* Stats Section */
+
+#stats {
+    padding: 0 120px;
+    margin: 0 auto;
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: 600 !important;
+}
+
+.pie {
+    width: 124px;
+    height: 124px;
+    border-radius: 50%;
+    background: conic-gradient(#2196f3 0% 60%, #ffc107 0% 80%, #4caf50 0% 100%);
+    position: relative;
+    transform: rotate(144deg);
+}
+
+.yellow {
+    color: #ffe03d;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+}
+
+.middle-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stats-section {
+    background: #FBFBFB;
+    border-radius: 24px;
+    padding: 20px;
+}
