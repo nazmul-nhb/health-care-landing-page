@@ -7,6 +7,7 @@
 /* Variables */
 :root {
     --doc: #020043;
+    --yellow: #ffc637;
 }
 
 body {
@@ -18,6 +19,8 @@ body {
 
 main {
     background-color: #e9e9ee;
+    padding: 0 120px;
+    margin: 0 auto;
 }
 
 /* styles for the header part */
@@ -27,7 +30,7 @@ header.background {
     background-repeat: no-repeat;
     background-size: cover; */
     position: relative;
-    padding: 56px 120px;
+    padding: 40px 120px 56px;
     letter-spacing: 1px;
 }
 
@@ -37,7 +40,7 @@ header.background {
     left: 0;
     width: 100%;
     height: 100%;
-background: linear-gradient(179.57deg,
+    background: linear-gradient(179.57deg,
             rgba(0, 193, 157, 0) 15%,
             /* Light color */
             rgba(2, 0, 67, 0.47) 65%,
@@ -107,13 +110,15 @@ button.appointment:hover {
 /* Stats Section */
 
 #stats {
-    padding: 0 120px 80px;
+    padding: 0 0 80px;
     margin: 0 auto;
 }
 
 .stats-number {
     font-size: 2.5rem;
     font-weight: 600 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 .pie {
@@ -143,4 +148,92 @@ button.appointment:hover {
     background: #FBFBFB;
     border-radius: 24px;
     padding: 20px;
+}
+
+.stats-section,
+.middle-stats-container {
+    flex-shrink: 1;
+}
+
+.mid-stats-title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.stats-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stats-description {
+    font-size: 0.875rem;
+}
+
+/* Who we are section */
+
+
+
+/* Service Section */
+
+.card-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.card-container>img {
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+}
+
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.bg-trans-blue {
+    position: absolute;
+    background: rgba(2, 0, 67, 0.6);
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    padding: 18px;
+    border-radius: 20px;
+    width: 55%;
+}
+
+.bg-trans-blue p {
+    width: 80%;
+}
+
+.arrow-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+}
+
+.arrow-icon:hover {
+    transform: scale(1.10);
+    transition: all 0.5s ease-in-out;
+}
+
+.button-common {
+    padding: 14px 28px;
+    cursor: pointer;
+    background-color: var(--yellow);
+    border: 1px solid var(--yellow);
+    border-radius: 12px;
+    color: var(--doc);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.button-common:hover {
+    color: var(--yellow);
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
 }
